@@ -29,7 +29,18 @@ form.onsubmit = event => {
 }
 
 function displayResultMessage(result) {
-  const message = `Seu IMC é de ${result}`
+  const conditionIMC =
+    result < 18.5
+      ? 'Abaixo do peso'
+      : result >= 18.5 && result < 25
+      ? 'Peso saudável'
+      : result >= 25 && result < 30
+      ? 'Sobrepeso'
+      : result > 30 && result < 40
+      ? 'Obeso'
+      : 'Obeso mórbido'
+
+  const message = `Seu IMC é de ${result}\n\nClassificação:\n${conditionIMC}`
 
   Modal.message.innerText = message
   Modal.open()

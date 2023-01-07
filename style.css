@@ -48,6 +48,10 @@ button {
   border-radius: 0.6rem;
 }
 
+.card.modal {
+  padding: 4.8rem 4rem 6.4rem;
+}
+
 .title {
   font-size: 3.2rem;
   line-height: 4rem;
@@ -60,6 +64,16 @@ form {
 
 form h1 {
   margin-bottom: 3.2rem;
+}
+
+form p {
+  margin: 2rem auto;
+  color: var(--tt-input);
+}
+
+form p > span {
+  font-weight: bold;
+  
 }
 
 form label {
@@ -143,9 +157,7 @@ form button:hover {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
-
   cursor: pointer;
-
   transition: transform 0.3s;
 }
 
